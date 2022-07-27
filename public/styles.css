@@ -1,0 +1,95 @@
+:root {
+    background-color: #36393f;
+    --title-background: #202225;
+    --title-button-normal: #202225;
+    --title-button-hover: #36393f;
+    --title-button-click: #4f535c;
+    --title-button-hover-close: #cc3d3d;
+    --title-button-click-close: #ff2b2b;
+    --title-text-color: rgb(176, 176, 176);
+    --text-normal-color: white;
+}
+
+
+/* body {
+    margin: 0px;
+    color: var(--text-normal-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+main {
+    padding: 8px;
+} */
+
+
+/* #region: --- Title bar styling --- */
+
+.title-bar {
+    height: 22px;
+    width: 100%;
+    background-color: var(--title-background);
+    -webkit-app-region: drag;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.title-bar .window-name {
+    margin-left: 10px;
+    -webkit-user-select: none;
+    user-select: none;
+    color: var(--title-text-color);
+    display: flex;
+    justify-content: baseline;
+}
+
+.title-bar .window-name img {
+    width: 14px;
+    height: 14px;
+    position: relative;
+    top: 1px;
+    left: -4px;
+    filter: brightness(80%)
+}
+
+.win-button,
+.win-button-close {
+    -webkit-app-region: no-drag;
+    border-radius: 0%;
+    float: left;
+    border: 0px;
+    height: 22px;
+    width: 28px;
+    color: var(--title-text-color);
+    background-color: var(--title-button-normal);
+    display: flex;
+    justify-content: center;
+}
+
+.win-button img,
+.win-button-close img {
+    background-position: center;
+    position: relative;
+    top: 1px;
+}
+
+.win-button:hover {
+    background-color: var(--title-button-hover);
+}
+
+.win-button:active {
+    background-color: var(--title-button-click);
+}
+
+.win-button-close:hover {
+    background-color: var(--title-button-hover-close);
+}
+
+.win-button-close:active {
+    background-color: var(--title-button-click-close);
+}
+
+
+/* #endregion */
